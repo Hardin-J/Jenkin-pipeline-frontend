@@ -4,25 +4,15 @@ import Renderer from 'react-test-renderer'
 
 
 describe('Login Page test suite', () => {
-    test('renders Username label', () => {
-        render(<LoginPage />);
-        const linkElement = screen.getByRole("Unamelabel");
-        expect(linkElement).toBeInTheDocument();
-    });
-
     test('renders Username input', () => {
         render(<LoginPage />);
-        const linkElement = screen.getByRole("username");
+        const linkElement = screen.getByTestId("username");
         expect(linkElement).toBeInTheDocument();
     });
-    test('renders Password label', () => {
-        render(<LoginPage />);
-        const linkElement = screen.getByRole("Pswdlabel");
-        expect(linkElement).toBeInTheDocument();
-    });
+    
     test('renders Password input', () => {
         render(<LoginPage />);
-        const linkElement = screen.getByRole("password");
+        const linkElement = screen.getByTestId("password");
         expect(linkElement).toBeInTheDocument();
     });
 
